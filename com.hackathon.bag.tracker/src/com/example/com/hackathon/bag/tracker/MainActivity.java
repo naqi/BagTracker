@@ -2,6 +2,8 @@ package com.example.com.hackathon.bag.tracker;
 
 import java.util.Locale;
 
+import com.androidquery.AQuery;
+
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
@@ -47,6 +49,10 @@ public class MainActivity extends FragmentActivity {
 		// Set up the ViewPager with the sections adapter.
 		mViewPager = (ViewPager) findViewById(R.id.pager);
 		mViewPager.setAdapter(mSectionsPagerAdapter);
+		
+
+		
+		
 
 	}
 
