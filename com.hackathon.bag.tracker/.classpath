@@ -6,5 +6,7 @@
 	<classpathentry kind="con" path="com.android.ide.eclipse.adt.LIBRARIES"/>
 	<classpathentry kind="lib" path="/home/naqi/3rdPartyLibs/android-query-0.22.10.jar"/>
 	<classpathentry kind="lib" path="libs/android-support-v4.jar"/>
+	<classpathentry kind="lib" path="libs/bagtracker-data-v1.jar"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/BackTrackerData"/>
 	<classpathentry kind="output" path="bin/classes"/>
 </classpath>
