@@ -2,19 +2,18 @@ package com.example.com.hackathon.bag.tracker;
 
 import java.util.Locale;
 
-import com.androidquery.AQuery;
+import com.example.com.hackathon.bag.tracker.providers.IZDAProvider;
+import com.example.com.hackathon.bag.tracker.providers.zda.ZDAProvider;
+import com.example.com.hackathon.bag.tracker.providers.zda.ZDAAuthenticationListener;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
-import android.support.v4.app.NavUtils;
 import android.support.v4.view.ViewPager;
-import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
@@ -50,10 +49,7 @@ public class MainActivity extends FragmentActivity {
 		mViewPager = (ViewPager) findViewById(R.id.pager);
 		mViewPager.setAdapter(mSectionsPagerAdapter);
 		
-
-		
-		
-
+		this.testZDA();
 	}
 
 	@Override
@@ -134,5 +130,10 @@ public class MainActivity extends FragmentActivity {
 	}
 
 		
-	
+	private void testZDA() {
+		IZDAProvider provider = new ZDAProvider(this);
+		ZDAAuthenticationListener listener = new ZDAAuthenticationListener(this, provider);
+		
+		provider.initiateSecurityTokenRequest(listener);
+	}
 }
