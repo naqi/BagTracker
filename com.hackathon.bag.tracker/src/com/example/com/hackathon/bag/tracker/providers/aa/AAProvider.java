@@ -1,6 +1,7 @@
 package com.example.com.hackathon.bag.tracker.providers.aa;
 
 import org.apache.http.Header;
+import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
 
 import android.content.Context;
@@ -35,6 +36,7 @@ public class AAProvider implements IAAProvider {
 		HttpResponse response = this.mRestProvider.getRequest(reservationUri);
 		
 		if(response != null && response.getStatusLine().getStatusCode() == 200) {
+			HttpEntity entity = response.getEntity();
 			
 		} else {
 			

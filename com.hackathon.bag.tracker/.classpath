@@ -8,5 +8,7 @@
 	<classpathentry kind="lib" path="libs/android-query-0.22.10.jar"/>
 	<classpathentry kind="lib" path="libs/ZDA.jar"/>
 	<classpathentry kind="lib" path="libs/gson-2.2.2.jar"/>
+	<classpathentry kind="lib" path="libs/bagtracker-data-v1.jar"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/BackTrackerData"/>
 	<classpathentry kind="output" path="bin/classes"/>
 </classpath>
